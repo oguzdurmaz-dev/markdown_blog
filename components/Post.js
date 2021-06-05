@@ -27,6 +27,14 @@ export default function Post({ post, slug }) {
         <Link href={`/blog/${slug}`}>
           <a className="text-gray-900 hover:text-blue-600">Read More</a>
         </Link>
+        <div className="flex items-center">
+          <img
+            src={post.author_image}
+            alt={post.author}
+            className="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+          />
+          <h3 className="text-gray-700 font-bold">{post.author}</h3>
+        </div>
       </div>
     </div>
   )
